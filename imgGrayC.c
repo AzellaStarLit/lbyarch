@@ -28,7 +28,7 @@ int main()
 	int a, b;
 	for(a = 0; a < smpW; a++){
 		for( b = 0; b < smpH; b++){
-			printf("%lf ", def[a * smpW + b]);
+			printf("%.2lf ", def[a * smpW + b]);
 		}
 		printf("\n");
 	}
@@ -100,7 +100,7 @@ int main()
 	printf("\nRESULT:\n");
 	for (i = 0; i < height; i++) {
 	    for (j = 0; j < width; j++) {
-	        printf("%lf ", arr2[i * width + j]);
+	        printf("%.2lf ", arr2[i * width + j]);
 	    }
 	    printf("\n");
 	}
