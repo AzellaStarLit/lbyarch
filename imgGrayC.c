@@ -19,11 +19,10 @@ int main()
 	};
 	
 	double* def = (double *) malloc (smpW * smpH * sizeof(double));
+	
+	// FUNCTION CALL HERE
+	
 	// imgCvtGrayInttoFloat(smpW, smpH, (int*)abc, def);
-	
-	
-	// SAMPLE
-	
 	
 	// PRINT SAMPLE
 	int a, b;
@@ -33,7 +32,6 @@ int main()
 		}
 		printf("\n");
 	}
-	
 	
 	/****************************************************** 
 		VARIABLE DECLARATIONS
@@ -76,26 +74,7 @@ int main()
 		}
 	}
 	
-	/****************************************************** 
-		CONVERT GRAY INT TO FLOAT
-	******************************************************/
-	
-	start = clock();
-	
-	// TODO: Call function here
-	
-	
-	end = clock();
-	
-	//Calculate time in milliseconds
-	time_used = (((double)end - start)) / CLOCKS_PER_SEC * 1000;
-	
-	printf("\nTime Executed: %ld ms", time_used);
-	
-	
-	// TODO: REMOVE AND PRINT VALUES IN FLOAT ARRAY
-	
-	printf("\nYou entered:\n");
+	printf("\nYou entered array:\n");
 	for (i = 0; i < height; i++) {
 	    for (j = 0; j < width; j++) {
 	        printf("%d ", arr1[i * width + j]);
@@ -103,5 +82,30 @@ int main()
 	    printf("\n");
 	}
 	
+	/****************************************************** 
+		CONVERT GRAY INT TO FLOAT
+	******************************************************/
+	
+	start = clock();
+	
+	// TODO: Call function here
+	imgCvtGrayInttoFloat(width, height, arr1, arr2);
+	
+	end = clock();
+	
+	//Calculate time in milliseconds
+	time_used = (((double)end - start)) / CLOCKS_PER_SEC * 1000;
+	
+	// PRINT RESULTING ARRAY
+	printf("\nRESULT:\n");
+	for (i = 0; i < height; i++) {
+	    for (j = 0; j < width; j++) {
+	        printf("%lf ", arr2[i * width + j]);
+	    }
+	    printf("\n");
+	}
+	
+	printf("\nTime Executed: %ld ms", time_used);
+
 	return 0;
 }
