@@ -24,7 +24,7 @@ int main()
 	
 	// imgCvtGrayInttoFloat(smpW, smpH, (int*)abc, def);
 	
-	// PRINT SAMPLE
+	// PRINT SAMPLE RESULT
 	int a, b;
 	for(a = 0; a < smpW; a++){
 		for( b = 0; b < smpH; b++){
