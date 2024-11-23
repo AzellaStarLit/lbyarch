@@ -19,7 +19,7 @@ int main()
 	};
 	
 	double* def = (double *) malloc (smpW * smpH * sizeof(double));
-	imgCvtGrayInttoFloat(smpW, smpH, (int*)abc, def);
+	// imgCvtGrayInttoFloat(smpW, smpH, (int*)abc, def);
 	
 	
 	// SAMPLE
@@ -41,6 +41,7 @@ int main()
 	// dimension of array
 	int width;
 	int height;
+	int i, j;
 	
 	// execution time
 	clock_t start, end;
@@ -51,7 +52,7 @@ int main()
 		GET USER INPUT
 	******************************************************/
 	
-	// GET INPUT FROM USER
+	// GET INPUT FOR HEIGHT AND WIDTH
 	
 	printf("Enter width: ");
 	scanf("%d", &width);
@@ -59,15 +60,21 @@ int main()
 	printf("Enter height: ");
 	scanf("%d", &height);
 	
-	// TODO: REMOVE PRINT WIDTH AND HEIGHT
-	printf("%d", width);
-	printf("%d", height);
-	
 	/****************************************************** 
 		ALLOCATE TO MEMORY
 	******************************************************/
-	int* arr1 = (int*) malloc (smpW * smpH * sizeof(int));
-	double* arr2 = (double*) malloc (smpW * smpH * sizeof(double));
+	int* arr1 = (int*) malloc (width * height * sizeof(int));
+	double* arr2 = (double*) malloc (width * height * sizeof(double));
+	
+	// GET INPUT FOR ARRAY
+	
+	printf("Enter the elements of the array: \n");
+	
+	for (i=0; i < height; i++){
+		for(j=0; j < width; j++){
+			scanf("%d", &arr1[i * width + j]);
+		}
+	}
 	
 	/****************************************************** 
 		CONVERT GRAY INT TO FLOAT
@@ -84,6 +91,17 @@ int main()
 	time_used = (((double)end - start)) / CLOCKS_PER_SEC * 1000;
 	
 	printf("\nTime Executed: %ld ms", time_used);
+	
+	
+	// TODO: REMOVE AND PRINT VALUES IN FLOAT ARRAY
+	
+	printf("\nYou entered:\n");
+	for (i = 0; i < height; i++) {
+	    for (j = 0; j < width; j++) {
+	        printf("%d ", arr1[i * width + j]);
+	    }
+	    printf("\n");
+	}
 	
 	return 0;
 }
