@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-extern float imgCvtGrayInttoFloat(int w, int h, int* arr1, float* arr2);
+extern float imgCvtGrayInttoFloat(int w, int h, int* arr1, double* arr2);
 
 int main()
 {	
@@ -18,22 +18,21 @@ int main()
 		{ 216, 242, 38, 84}
 	};
 	
-	//imgCvtGrayInttoFloat(smpW, smpH, abc, def);
+	double* def = (double *) malloc (smpW * smpH * sizeof(double));
+	imgCvtGrayInttoFloat(smpW, smpH, (int*)abc, def);
 	
 	
 	// SAMPLE
 	
 	
 	// PRINT SAMPLE
-	int i, j;
-	for(i = 0; i < smpW; i++){
-		for( j = 0; j < smpH; j++){
-			printf("%d ", abc[i][j]);
+	int a, b;
+	for(a = 0; a < smpW; a++){
+		for( b = 0; b < smpH; b++){
+			printf("%lf ", def[a * smpW + b]);
 		}
 		printf("\n");
 	}
-	
-	
 	
 	
 	/****************************************************** 
@@ -67,17 +66,17 @@ int main()
 	/****************************************************** 
 		ALLOCATE TO MEMORY
 	******************************************************/
-	
+	int* arr1 = (int*) malloc (smpW * smpH * sizeof(int));
+	double* arr2 = (double*) malloc (smpW * smpH * sizeof(double));
 	
 	/****************************************************** 
 		CONVERT GRAY INT TO FLOAT
 	******************************************************/
 	
-	// int array[height][width];
-	
 	start = clock();
 	
 	// TODO: Call function here
+	
 	
 	end = clock();
 	
