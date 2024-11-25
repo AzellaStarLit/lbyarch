@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-extern float imgCvtGrayInttoFloat(int w, int h, int* arr1, double* arr2);
+extern void imgCvtGrayInttoFloat(int w, int h, int* arr1, float* arr2);
 
 int main()
 {	
@@ -18,17 +18,20 @@ int main()
 		{ 216, 242, 38, 84}
 	};
 	
-	double* def = (double *) malloc (smpW * smpH * sizeof(double));
+	float* def = (float *) malloc (smpW * smpH * sizeof(float));
 	
 	// FUNCTION CALL HERE
 	
-	// imgCvtGrayInttoFloat(smpW, smpH, (int*)abc, def);
+	imgCvtGrayInttoFloat(smpW, smpH, (int*)abc, def);
 	
 	// PRINT SAMPLE RESULT
 	int a, b;
+	int c = 0;
+	
 	for(a = 0; a < smpW; a++){
 		for( b = 0; b < smpH; b++){
-			printf("%.2lf ", def[a * smpW + b]);
+			printf("%.2lf ", def[c]);
+			c++;
 		}
 		printf("\n");
 	}
@@ -40,6 +43,7 @@ int main()
 	int width;
 	int height;
 	int i, j;
+	int index;
 	
 	// execution time
 	clock_t start, end;
@@ -62,22 +66,26 @@ int main()
 		ALLOCATE TO MEMORY
 	******************************************************/
 	int* arr1 = (int*) malloc (width * height * sizeof(int));
-	double* arr2 = (double*) malloc (width * height * sizeof(double));
+	float* arr2 = (float*) malloc (width * height * sizeof(float));
 	
 	// GET INPUT FOR ARRAY
 	
 	printf("Enter the elements of the array: \n");
 	
+	index = 0;
 	for (i=0; i < height; i++){
 		for(j=0; j < width; j++){
-			scanf("%d", &arr1[i * width + j]);
+			scanf("%d", &arr1[index]);
+			index++;
 		}
 	}
 	
 	printf("\nYou entered array:\n");
+	index = 0;
 	for (i = 0; i < height; i++) {
 	    for (j = 0; j < width; j++) {
 	        printf("%d ", arr1[i * width + j]);
+	        index++;
 	    }
 	    printf("\n");
 	}
@@ -98,14 +106,16 @@ int main()
 	
 	// PRINT RESULTING ARRAY
 	printf("\nRESULT:\n");
+	index = 0;
 	for (i = 0; i < height; i++) {
 	    for (j = 0; j < width; j++) {
-	        printf("%.2lf ", arr2[i * width + j]);
+	        printf("%.2lf ", arr2[index]);
+	        index++;
 	    }
 	    printf("\n");
 	}
 	
-	printf("\nTime Executed: %ld ms", time_used);
+	printf("\nTime Executed: %.2lf ms", time_used);
 
 	return 0;
 }

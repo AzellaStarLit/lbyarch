@@ -20,7 +20,7 @@ innerLoop:
     cmp rsi, 0           
     jle endInner   
 
-    mov rax, r8      
+    mov rax, [r8]      
     CVTSI2SS xmm0, rax   
     DIVSS xmm0, [whiteOrIValue]             
     movss [r9], xmm0    
