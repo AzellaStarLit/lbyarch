@@ -27,7 +27,7 @@ To compile and run the program, use the following commands below:
 
 Images bellow show the program running with example array from the specs (Image 1 and 2) and and array of 0-255 to show correctness of the different pixel values (Image 3).
 
-![alt text](image.png) ![alt text](image-1.png) ![alt text](image-2.png)
+![alt text]([image.png](https://github.com/AzellaStarLit/lbyarch/tree/main/images/image1)) ![alt text]([image-1.png](https://github.com/AzellaStarLit/lbyarch/tree/main/images/image1)) ![alt text]([image-2.png](https://github.com/AzellaStarLit/lbyarch/tree/main/images/image1))
 
 # Execution Time and Analysis
 
