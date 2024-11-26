@@ -99,7 +99,6 @@ int main()
 	    printf("\n");
 	}
 	
-	printf("\nTotal Time Executed: %.6lf ms", time_used);
 	printf("\nAverage Execution Time (30 runs): %.6lf ms", average_time);
 
 	return 0;
