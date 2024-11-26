@@ -1,6 +1,9 @@
 MP2 for LBYARCH Term 1 AY 2024-2025 
+
 Alabat, Jeanne Hazel
+
 Baterina, Patricia Ysabelle
+
 Section S16
 
 # About the Program
@@ -27,7 +30,13 @@ To compile and run the program, use the following commands below:
 
 Images bellow show the program running with example array from the specs (Image 1 and 2) and and array of 0-255 to show correctness of the different pixel values (Image 3).
 
-![alt text](./images/image1.png) ![alt text](./images/image2.png) ![alt text](./images/image3.png)
+<img src="./images/image1.png" width=500 style="padding-bottom: 20px">
+
+
+<img src="./images/image2.png" width=500 style="padding-bottom: 20px">
+
+
+<img src="./images/image3.png" width=500 style="padding-bottom: 20px">
 
 # Execution Time and Analysis
 
