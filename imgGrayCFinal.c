@@ -27,7 +27,7 @@ int main()
 	//For average execution time.
 	clock_t start, end;
 	double time_used;
-	
+	double average_time;
 	
 	/****************************************************** 
 		GET USER INPUT
@@ -85,6 +85,9 @@ int main()
 	//Calculate time in milliseconds
 	time_used = (double)(end - start) / CLOCKS_PER_SEC * 1000;
 	
+	// Divide by 30 times to get average execution time
+	average_time = time_used / 30;
+	
 	// PRINT RESULTING ARRAY
 	printf("\nRESULT:\n");
 	index = 0;
@@ -96,7 +99,8 @@ int main()
 	    printf("\n");
 	}
 	
-	printf("\nTime Executed: %.2lf ms", time_used);
+	printf("\nTotal Time Executed: %.6lf ms", time_used);
+	printf("\nAverage Execution Time (30 runs): %.6lf ms", average_time);
 
 	return 0;
 }
