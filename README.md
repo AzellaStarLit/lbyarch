@@ -27,7 +27,7 @@ To compile and run the program, use the following commands below:
 
 Images bellow show the program running with example array from the specs (Image 1 and 2) and and array of 0-255 to show correctness of the different pixel values (Image 3).
 
-![alt text](./images/image1) ![alt text](./images/image2) ![alt text](./images/image3)
+![alt text](./images/image1.png) ![alt text](./images/image2.png) ![alt text](./images/image3.png)
 
 # Execution Time and Analysis
 
