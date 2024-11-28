@@ -59,16 +59,6 @@ int main()
 		}
 	}
 	
-	printf("\nYou entered array:\n");
-	index = 0;
-	for (i = 0; i < width; i++) {
-	    for (j = 0; j < height; j++) {
-	        printf("%d ", arr1[i * width + j]);
-	        index++;
-	    }
-	    printf("\n");
-	}
-	
 	/****************************************************** 
 		CONVERT GRAY INT TO FLOAT
 	******************************************************/
