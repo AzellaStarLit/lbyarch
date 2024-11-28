@@ -52,21 +52,11 @@ int main()
 	printf("Enter the elements of the array: \n");
 	
 	index = 0;
-	for (i=0; i < height; i++){
-		for(j=0; j < width; j++){
+	for (i=0; i < width; i++){
+		for(j=0; j < height; j++){
 			scanf("%d", &arr1[index]);
 			index++;
 		}
-	}
-	
-	printf("\nYou entered array:\n");
-	index = 0;
-	for (i = 0; i < height; i++) {
-	    for (j = 0; j < width; j++) {
-	        printf("%d ", arr1[i * width + j]);
-	        index++;
-	    }
-	    printf("\n");
 	}
 	
 	/****************************************************** 
@@ -91,8 +81,8 @@ int main()
 	// PRINT RESULTING ARRAY
 	printf("\nRESULT:\n");
 	index = 0;
-	for (i = 0; i < height; i++) {
-	    for (j = 0; j < width; j++) {
+	for (i = 0; i < width; i++) {
+	    for (j = 0; j < height; j++) {
 	        printf("%.2lf ", arr2[index]);
 	        index++;
 	    }
